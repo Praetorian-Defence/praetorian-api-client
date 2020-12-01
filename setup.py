@@ -18,6 +18,7 @@ setup(
     version=meta['__version__'],
     packages=[
         'praetorian_api_client',
+        'praetorian_api_client.resources'
     ],
     install_requires=[
         'python-dotenv==0.15.*',
