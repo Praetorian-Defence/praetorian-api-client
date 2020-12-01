@@ -1,0 +1,10 @@
+.idea/
+.pytest_cache
+praetorian-api-client.egg-info
+build
+dist
+venv
+.env
+__pycache__/
+praetorian_api_client/__pycache__/
+tests/__pycache__/
