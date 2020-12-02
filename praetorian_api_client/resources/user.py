@@ -15,6 +15,7 @@ class UserResource(BaseResource):
         phone: str
         role: str
         is_temporary: bool
+        additional_data: dict
 
     def get_me(self) -> User:
         response = self.requestor.request('GET', 'users/me/')['response']
@@ -27,5 +28,15 @@ class UserResource(BaseResource):
             email=response.get('email'),
             phone=response.get('phone'),
             role=response.get('role'),
-            is_temporary=response.get('is_temporary')
+            is_temporary=response.get('is_temporary'),
+            additional_data=response.get('additional_data')
         )
+
+    def delete_me(self) -> bool:
+        response = self.requestor.request('DELETE', f'users/me/', parse=False)
+        is_deleted = False
+
+        if response is not None:
+            is_deleted = True
+
+        return is_deleted

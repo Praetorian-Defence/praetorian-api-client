@@ -25,3 +25,8 @@
 ## 0.1.6 : 2020-02-12
 
 - 🦾 Fixed getting variables of service object.
+
+## 0.2.0 : 2020-02-12
+
+- 🥑 Implemented self delete endpoint for temporary user.
+- 🥑 Added additional data to user get response.
