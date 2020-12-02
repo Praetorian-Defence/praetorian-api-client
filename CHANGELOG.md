@@ -17,3 +17,7 @@
 ## 0.1.4 : 2020-02-12
 
 - 😴 Implemented fill_content method for filling query/payload content
+
+## 0.1.5 : 2020-02-12
+
+- 🤭 Implemented tests according to specific filter arguments

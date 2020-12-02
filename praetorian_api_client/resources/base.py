@@ -20,8 +20,6 @@ class BaseResource(ABC):
         for k in kwargs:
             if kwargs[k] is not None:
                 values[k] = kwargs[k]
-        if not values:
-            raise Exception('No values provided')
         return values
 
     @property
