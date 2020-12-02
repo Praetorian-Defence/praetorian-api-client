@@ -30,3 +30,7 @@
 
 - 🥑 Implemented self delete endpoint for temporary user.
 - 🥑 Added additional data to user get response.
+
+## 0.3.0 : 2020-02-12
+
+- 🍓 Implemented endpoint for getting one specific remote by id.
