@@ -21,7 +21,7 @@ class ServiceResource(BaseResource):
             self.Service(
                 id=item.get('id'),
                 name=item.get('name'),
-                type=item.get('host'),
-                variables=item.get('port')
+                type=item.get('type'),
+                variables=item.get('variables')
             ) for item in response
         ]

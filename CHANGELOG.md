@@ -21,3 +21,7 @@
 ## 0.1.5 : 2020-02-12
 
 - 🤭 Implemented tests according to specific filter arguments
+
+## 0.1.6 : 2020-02-12
+
+- 🦾 Fixed getting variables of service object.
