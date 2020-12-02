@@ -1,5 +1,6 @@
 from .resources.project import ProjectResource
 from .resources.remote import RemoteResource
+from .resources.service import ServiceResource
 from .resources.token import TokenResource
 from .resources.user import UserResource
 from .version import __version__
@@ -16,6 +17,7 @@ class ApiClient(object):
         self._user = UserResource(self._requestor, self._configuration)
         self._project = ProjectResource(self._requestor, self._configuration)
         self._remote = RemoteResource(self._requestor, self._configuration)
+        self._service = ServiceResource(self._requestor, self._configuration)
 
     @classmethod
     def create_from_auth(cls, configuration: Configuration, username: str, password: str) -> 'ApiClient':
@@ -48,6 +50,10 @@ class ApiClient(object):
     @property
     def remote(self) -> RemoteResource:
         return self._remote
+
+    @property
+    def service(self) -> ServiceResource:
+        return self._service
 
     def __str__(self) -> str:
         return f"{self.requestor}"

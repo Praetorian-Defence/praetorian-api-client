@@ -9,3 +9,7 @@
 ## 0.1.2 : 2020-01-12
 
 - 🌈 Added to remote list possibility to filter by name
+
+## 0.1.3 : 2020-02-12
+
+- 🎃 Implemented service list
