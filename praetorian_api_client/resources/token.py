@@ -11,11 +11,7 @@ class TokenResource(BaseResource):
         active_2fa: bool
 
     def auth(self, username: str, password: str) -> Token:
-        payload = {
-            "username": username,
-            "password": password
-        }
-
+        payload = self.fill_content(username=username, password=password)
         response = self.requestor.request('POST', 'tokens/', payload=payload)['response']
 
         return self.Token(

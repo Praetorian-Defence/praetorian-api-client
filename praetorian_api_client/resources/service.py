@@ -14,13 +14,7 @@ class ServiceResource(BaseResource):
         variables: dict
 
     def list(self, remote_id: str = None, service_type: str = None) -> List[Service]:
-        query = {}
-
-        if remote_id:
-            query = query.update({'remote_id': remote_id})
-        if service_type:
-            query = query.update({'type': service_type})
-
+        query = self.fill_content(remote_id=remote_id, service_type=service_type)
         response = self.requestor.request('GET', 'services/', query=query)['items']
 
         return [

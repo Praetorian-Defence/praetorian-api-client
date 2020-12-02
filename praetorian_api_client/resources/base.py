@@ -14,6 +14,16 @@ class BaseResource(ABC):
     def _sign(self, data: str) -> str:
         return hmac.new(self._configuration.secret.encode(), data.encode(), hashlib.sha256).hexdigest().upper()
 
+    @staticmethod
+    def fill_content(**kwargs) -> dict:
+        values = {}
+        for k in kwargs:
+            if kwargs[k] is not None:
+                values[k] = kwargs[k]
+        if not values:
+            raise Exception('No values provided')
+        return values
+
     @property
     def requestor(self) -> Requestor:
         return self._requestor

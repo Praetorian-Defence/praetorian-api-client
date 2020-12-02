@@ -13,13 +13,7 @@ class ProjectResource(BaseResource):
         is_vpn: bool
 
     def list(self, user_id: str = None) -> List[Project]:
-        query = {}
-
-        if user_id:
-            query = query.update({
-                'user_id': user_id
-            })
-
+        query = self.fill_content(user_id=user_id)
         response = self.requestor.request('GET', 'projects/', query=query)['items']
 
         return [

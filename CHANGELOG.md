@@ -13,3 +13,7 @@
 ## 0.1.3 : 2020-02-12
 
 - 🎃 Implemented service list
+
+## 0.1.4 : 2020-02-12
+
+- 😴 Implemented fill_content method for filling query/payload content

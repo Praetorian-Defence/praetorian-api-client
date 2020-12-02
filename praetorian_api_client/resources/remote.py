@@ -14,13 +14,7 @@ class RemoteResource(BaseResource):
         port: str
 
     def list(self, project_id: str = None, name: str = None) -> List[Remote]:
-        query = {}
-
-        if project_id:
-            query = query.update({'project_id': project_id})
-        if name:
-            query = query.update({'name': name})
-
+        query = self.fill_content(project_id=project_id, name=name)
         response = self.requestor.request('GET', 'remotes/', query=query)['items']
 
         return [
