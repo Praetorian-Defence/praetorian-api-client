@@ -38,3 +38,7 @@
 ## 0.4.0 : 2021-06-05
 
 - 🍇 Implemented endpoint for getting one specific service by id.
+
+## 0.4.1 : 2021-06-05
+
+- 🍌 Service endpoints now gets all data from the instance.
