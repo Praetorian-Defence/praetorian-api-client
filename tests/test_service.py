@@ -2,6 +2,11 @@ import uuid
 
 
 class TestService:
+    def test_successful_get_service(self, api_client):
+        service = api_client.service.get(service_id='400469c6-8cd5-4c38-9add-b24bb637397b')
+
+        assert hasattr(service, 'id') and uuid.UUID(service.id)
+
     def test_successful_list_services(self, api_client):
         service = api_client.service.list()
 

@@ -67,4 +67,4 @@ environment variables, you need to create an `.env` file from the example in the
 
 ---
 Developed with 💙 and ☕️ by [Adam Žúrek](https://zurek11.github.io/)
-with the support of [BACKBONE s.r.o.](https://www.backbone.sk/), 2020 (C)
+with the support of [BACKBONE s.r.o.](https://www.backbone.sk/), 2021 (C)

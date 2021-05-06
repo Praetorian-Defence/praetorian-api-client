@@ -34,3 +34,7 @@
 ## 0.3.0 : 2020-02-12
 
 - 🍓 Implemented endpoint for getting one specific remote by id.
+
+## 0.4.0 : 2021-06-05
+
+- 🍇 Implemented endpoint for getting one specific service by id.

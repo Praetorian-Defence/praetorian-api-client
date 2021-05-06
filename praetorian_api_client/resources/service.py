@@ -25,3 +25,13 @@ class ServiceResource(BaseResource):
                 variables=item.get('variables')
             ) for item in response
         ]
+
+    def get(self, service_id: str) -> Service:
+        response = self.requestor.request('GET', f'services/{service_id}/')['response']
+
+        return self.Service(
+            id=response.get('id'),
+            name=response.get('name'),
+            type=response.get('type'),
+            variables=response.get('variables')
+        )
