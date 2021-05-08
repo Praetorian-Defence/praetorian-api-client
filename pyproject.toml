@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "praetorian-api-client"
-version = "0.4.1"
+version = "0.4.2"
 description = "API Client for praetorian-api project."
 authors = ["Adam Žúrek <adamzurek14@gmail.com>"]
 license = "MIT"

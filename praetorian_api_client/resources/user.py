@@ -17,6 +17,11 @@ class UserResource(BaseResource):
         is_temporary: bool
         additional_data: dict
 
+    @dataclass
+    class TemporaryUser(object):
+        username: str
+        password: str
+
     def get_me(self) -> User:
         response = self.requestor.request('GET', 'users/me/')['response']
 
@@ -40,3 +45,12 @@ class UserResource(BaseResource):
             is_deleted = True
 
         return is_deleted
+
+    def create_temporary(self, project_id: str, remote_id: str, service_id: str) -> TemporaryUser:
+        payload = self.fill_content(project_id=project_id, remote_id=remote_id, service_id=service_id)
+        response = self.requestor.request('POST', 'temporary_users/create/', payload=payload)['response']
+
+        return self.TemporaryUser(
+            username=response.get('username'),
+            password=response.get('password')
+        )

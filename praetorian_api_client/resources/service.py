@@ -13,8 +13,8 @@ class ServiceResource(BaseResource):
         type: str
         variables: dict
 
-    def list(self, remote_id: str = None, service_type: str = None) -> List[Service]:
-        query = self.fill_content(remote_id=remote_id, service_type=service_type)
+    def list(self, remote_id: str = None, name: str = None, service_type: str = None) -> List[Service]:
+        query = self.fill_content(remote_id=remote_id, name=name, service_type=service_type)
         response = self.requestor.request('GET', 'services/', query=query)['items']
 
         return [

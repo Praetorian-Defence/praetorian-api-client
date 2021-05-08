@@ -12,8 +12,8 @@ class ProjectResource(BaseResource):
         name: str
         is_vpn: bool
 
-    def list(self, user_id: str = None) -> List[Project]:
-        query = self.fill_content(user_id=user_id)
+    def list(self, user_id: str = None, name: str = None) -> List[Project]:
+        query = self.fill_content(user_id=user_id, name=name)
         response = self.requestor.request('GET', 'projects/', query=query)['items']
 
         return [

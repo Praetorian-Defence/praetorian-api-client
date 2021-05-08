@@ -42,3 +42,9 @@
 ## 0.4.1 : 2021-06-05
 
 - 🍌 Service endpoints now gets all data from the instance.
+
+## 0.4.2 : 2021-08-05
+
+- 🥒 Added name filter to the project listing endpoint.
+- 🥒 Added name filter to the service listing endpoint.
+- 🥒 Implemented create of temporary user endpoint.
