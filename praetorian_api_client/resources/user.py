@@ -46,8 +46,8 @@ class UserResource(BaseResource):
 
         return is_deleted
 
-    def create_temporary(self, project_id: str, remote_id: str, service_id: str) -> TemporaryUser:
-        payload = self.fill_content(project_id=project_id, remote_id=remote_id, service_id=service_id)
+    def create_temporary(self, project_id: str, remote_id: str) -> TemporaryUser:
+        payload = self.fill_content(project_id=project_id, remote_id=remote_id)
         response = self.requestor.request('POST', 'temporary_users/create/', payload=payload)['response']
 
         return self.TemporaryUser(

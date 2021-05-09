@@ -48,3 +48,8 @@
 - 🥒 Added name filter to the project listing endpoint.
 - 🥒 Added name filter to the service listing endpoint.
 - 🥒 Implemented create of temporary user endpoint.
+
+## 0.4.3 : 2021-09-05
+
+- 🥕 Changed api requests according to the new api changes.
+- 🥕 Implemented test for temporary_user creation process.
