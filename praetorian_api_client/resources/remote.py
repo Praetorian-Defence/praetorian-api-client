@@ -15,6 +15,7 @@ class RemoteResource(BaseResource):
         user: str
         password: str
         variables: dict
+        project: dict
 
     def get(self, remote_id: str) -> Remote:
         response = self.requestor.request('GET', f'remotes/{remote_id}/')['response']
@@ -26,7 +27,8 @@ class RemoteResource(BaseResource):
             port=response.get('port'),
             user=response.get('user'),
             password=response.get('password'),
-            variables=response.get('variables')
+            variables=response.get('variables'),
+            project=response.get('project')
         )
 
     def list(self, project_id: str = None, name: str = None) -> List[Remote]:
@@ -41,6 +43,7 @@ class RemoteResource(BaseResource):
                 port=item.get('port'),
                 user=item.get('user'),
                 password=item.get('password'),
-                variables=item.get('variables')
+                variables=item.get('variables'),
+                project=item.get('project')
             ) for item in response
         ]

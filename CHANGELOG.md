@@ -53,3 +53,7 @@
 
 - 🥕 Changed api requests according to the new api changes.
 - 🥕 Implemented test for temporary_user creation process.
+
+## 0.4.4 : 2021-09-05
+
+- 🥥 Added project response attribute mapping in remote get endpoints.
