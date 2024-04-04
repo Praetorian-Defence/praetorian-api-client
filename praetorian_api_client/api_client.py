@@ -1,3 +1,4 @@
+from .resources.log import LogResource
 from .resources.project import ProjectResource
 from .resources.remote import RemoteResource
 from .resources.service import ServiceResource
@@ -18,6 +19,7 @@ class ApiClient(object):
         self._project = ProjectResource(self._requestor, self._configuration)
         self._remote = RemoteResource(self._requestor, self._configuration)
         self._service = ServiceResource(self._requestor, self._configuration)
+        self._log = LogResource(self._requestor, self._configuration)
 
     @classmethod
     def create_from_auth(cls, configuration: Configuration, username: str, password: str) -> 'ApiClient':
@@ -54,6 +56,10 @@ class ApiClient(object):
     @property
     def service(self) -> ServiceResource:
         return self._service
+
+    @property
+    def log(self) -> LogResource:
+        return self._log
 
     def __str__(self) -> str:
         return f"{self.requestor}"

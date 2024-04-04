@@ -1,18 +1,18 @@
 [tool.poetry]
 name = "praetorian-api-client"
-version = "0.4.4"
+version = "0.5.0"
 description = "API Client for praetorian-api project."
-authors = ["Adam Žúrek <adamzurek14@gmail.com>"]
+authors = ["Adam Žúrek <adamzurek14@gmail.com>", "Erik Belák <erik.belak@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.8"
-requests = "^2.24.0"
+python = "^3.9"
+requests = "^2.31.0"
 python-dotenv = "^0.15.0"
 
 [tool.poetry.dev-dependencies]
-pytest = "^6.1.2"
-pytest-flake8 = "^1.0.6"
+pytest = "^6.2.0"
+pytest-flake8 = "^1.1.0"
 pytest-cov = "^2.10.1"
 
 [build-system]

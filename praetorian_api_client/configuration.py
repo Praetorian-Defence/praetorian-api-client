@@ -1,8 +1,3 @@
-import os
-
-from dotenv import load_dotenv
-
-
 class Environment(object):
     def __init__(self, name: str, api_url: str, read_only: bool = True):
         self._name = name

@@ -66,5 +66,5 @@ Tests require access data to the api. For security reasons, access data is store
 environment variables, you need to create an `.env` file from the example in the `.env.example` file.
 
 ---
-Developed with 💙 and ☕️ by [Adam Žúrek](https://zurek11.github.io/)
-with the support of [BACKBONE s.r.o.](https://www.backbone.sk/), 2021 (C)
+Developed with 💙 and ☕️ by [Adam Žúrek](https://zurek11.github.io/) & Erik Belák
+with the support of [BACKBONE s.r.o.](https://www.backbone.sk/), 2024 (C)
