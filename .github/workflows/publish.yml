@@ -13,19 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python
-      uses: actions/setup-python@v1
+    - uses: actions/checkout@v4
+    - name: Build and publish to Python package repository
+      uses: JRubics/poetry-publish@v2
       with:
-        python-version: '3.x'
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install setuptools wheel twine
-    - name: Build and publish
-      env:
-        TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
-        TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
-      run: |
-        python setup.py sdist bdist_wheel
-        twine upload dist/*
+        repository_name: "praetorian-api-client"
+        repository_url: "https://github.com/Praetorian-Defence/praetorian-api-client"
+        pypi_token: ${{ secrets.PYPI_TOKEN }}
